@@ -1,6 +1,20 @@
 body {
+    background: #FFFFFF;
+background: -moz-linear-gradient(left, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
+background: -webkit-linear-gradient(left, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
+background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
     background-color: white;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-
+    
 }
+header{
+    background: yellow;
+}
+
+button{
+    background: orange;
+}
+
+
+
