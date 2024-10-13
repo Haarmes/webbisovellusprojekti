@@ -68,9 +68,9 @@ async function clickFunctionText() {
     let text = document.getElementById("textBooks").innerHTML;
     console.log("yes2");
     //const response = await fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + text + '&limit=1&appid=' + geoApiKey);
-    const response = await fetch('https://cat-fact.herokuapp.com/fact');
+    const response = await fetch('https://cat-fact.herokuapp.com/facts');
     console.log("yes");
     console.log(response);
     document.getElementById("textBooks").value = "";
-    document.getElementById("textInput").innerHTML = "You send a text with " + text;
+    document.getElementById("textInput").innerHTML = "You send a text with " + response;
 }
