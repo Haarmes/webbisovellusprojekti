@@ -1,5 +1,3 @@
-//let d = new Date();
-//document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
 let geoLatitude, geoLongitude;
 let geoApiKey = "d594093470b3d6bc2814a1178318feec";
 let kelvinTransfer = 273.15;
