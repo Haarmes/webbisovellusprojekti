@@ -1,9 +1,10 @@
-let geoLatitude, geoLongitude;
-let geoApiKey = "d594093470b3d6bc2814a1178318feec";
-let kelvinTransfer = 273.15;
 const link1 = document.getElementById("link1ID");
 const link2 = document.getElementById("link2ID");
 const link3 = document.getElementById("link3ID");
+const pictureArray = [{ kuvaPath: "assets/pictures/profiilikuva24-7.png", kuvaus: "24h kortti kuva", nimi: "profiilikuva24-7" }, { kuvaPath: "assets/pictures/severipng.png", kuvaus: "Lapsuus kuva", nimi: "severipng" }, { kuvaPath: "assets/pictures/lefPic.png", kuvaus: "led projekti kuva", nimi: "ledPic" }, { kuvaPath: "assets/pictures/feelinsealy.png", kuvaus: "hassu hylje kuva", nimi: "feelinsealy" }];
+let UsedPicArray = [];
+let imageNum = 0;
+window.setInterval(switchProfilePic, 1000);
 
 link1.addEventListener("click", function () {
     //alert("link1");
@@ -18,41 +19,6 @@ link3.addEventListener("click", function () {
     window.open("https://www.twitch.tv/haarmes", '_blank').focus();
 })
 
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-        geoLatitude = position.coords.latitude;
-        geoLongitude = position.coords.longitude;
-        console.log(`Latitude: ${geoLatitude}, Longitude: ${geoLongitude}`);
-    });
-} else {
-    console.log("Geolocation is not supported by this browser.");
-}
-
-function getWeatherInfo() {
-    // Define the API URL
-    //const apiU = 'http://api.openweathermap.org/geo/1.0/direct?q=';
-    const apiUrl2 = 'https://api.openweathermap.org/data/2.5/weather?lat=' + geoLatitude + "&lon=" + geoLongitude + "&appid=" + geoApiKey;
-
-    console.log(apiUrl2);
-    // Make a GET request
-    fetch(apiUrl2)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-            let tempCels = Number(data.main.temp) - kelvinTransfer;
-            console.log("tempcels = " + tempCels);
-            console.log(data.main.temp);
-            document.getElementById("weatherTemp").innerHTML = "Current temperature is: " + parseInt(tempCels) + "°C";
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-}
 
 function show(shown, hidden) {
 
@@ -64,10 +30,15 @@ function show(shown, hidden) {
 }
 
 function clickFunctionTextSend() {
+    window.alert("text was send to table")
+    var table = document.getElementById("myTable");
     let text = document.getElementById("getText").value;
+    let date = new Date();
+    textArray.push(text)
     document.getElementById("getText").value = "";
     console.log(text);
-    document.getElementById("textInput").innerHTML = text;
+    document.getElementById("tableText").innerHTML = text;
+    document.getElementById("tableTime").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 }
 
 async function clickFunctionText() {
@@ -80,4 +51,22 @@ async function clickFunctionText() {
     });
     console.log(response.image);
     document.getElementById("foxImage").src = response.image;
+}
+
+function switchProfilePic() {
+
+    console.log("tässä kuvat käytetty" + UsedPicArray);
+    for (let i = 0; i < pictureArray.length; i++) {
+        console.log(pictureArray[i].kuvaus);
+        if (UsedPicArray.includes(pictureArray[i].nimi)) {
+            console.log("picture used")
+            UsedPicArray.push(pictureArray[i].nimi);
+        }
+        else {
+            document.getElementById("profilePicID").src = pictureArray[i].kuvaPath;
+            console.log(pictureArray[i].nimi)
+
+            console.log("ei käytetty");
+        }
+    }
 }

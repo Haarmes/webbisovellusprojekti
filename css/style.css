@@ -75,7 +75,7 @@ body {
 
 .pictureDiv {
 
-    background-color: lightcoral;
+    background-color: lightblue;
     width: 256px;
     height: 256px;
 
@@ -98,24 +98,28 @@ body {
 }
 
 .titlePicture {
-    background-color: lightcoral;
+    background-color: lightblue;
 
 }
 
 .titleText {
-    background-color: lightcoral;
+    background-color: lightblue;
 }
 
-h1 {}
+h1 {
+    font-family: "Times New Roman", Times, serif;
+}
 
-h2 {}
+h2 {
+    font-family: "Times New Roman", Times, serif;
+}
 
 .foxImage {
     display: flex;
 }
 
 .linksDiv {
-    background-color: lightcoral;
+    background-color: lightblue;
     display: flex;
     flex-direction: row;
 
@@ -134,7 +138,7 @@ h2 {}
 }
 
 .titleLink {
-    background-color: lightgreen;
+    background-color: lightblue;
     margin-left: 10px;
     margin-right: 10px;
 
@@ -150,7 +154,7 @@ h2 {}
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: lightcoral;
+    background-color: lightcyan;
     border-radius: 5px;
 
 }
