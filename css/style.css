@@ -1,4 +1,4 @@
-body {
+/*body {
     background: #FFFFFF;
 background: -moz-linear-gradient(left, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
 background: -webkit-linear-gradient(left, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
@@ -14,7 +14,229 @@ header{
 
 button{
     background: orange;
+}*/
+
+
+header {
+    display: flex;
+    height: 45px;
+    background-color: rgb(51, 51, 51);
+    margin: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    transition: height 0.45s;
+
+}
+
+header:hover {
+    height: 55px;
+}
+
+body {
+    background-color: rgb(85, 85, 85);
+    color: white;
+    margin: 0;
+    height: 2000px;
+}
+
+.header-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    display: flex;
+
+    vertical-align: middle;
+    align-items: center;
+    color: lightblue;
+    padding-left: 12px;
+    font-weight: bold;
+    transition: font-size 0.45s;
+}
+
+.header-title:hover {
+    font-size: 32px;
 }
 
 
 
+.page1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+    background-color: lightblue;
+    align-items: center;
+
+}
+
+.page2 {
+    display: none;
+    flex-direction: column;
+    background-color: lightblue;
+}
+
+.pictureDiv {
+
+    background-color: lightcoral;
+    width: 256px;
+    height: 256px;
+
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+
+
+}
+
+.divForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.profilePicClass {
+    width: 256px;
+    height: 256px;
+
+    border-radius: 50%;
+}
+
+.titlePicture {
+    background-color: lightcoral;
+
+}
+
+.titleText {
+    background-color: lightcoral;
+}
+
+h1 {}
+
+h2 {}
+
+
+
+.linksDiv {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+
+
+
+}
+
+.individualLinkDiv {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    margin: 1px;
+    align-items: center;
+
+
+}
+
+.titleLink {
+    background-color: lightgreen;
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+}
+
+.linkPicture {
+    height: 24px;
+    width: 24px;
+}
+
+.infoPanelDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: lightcoral;
+    border-radius: 5px;
+
+}
+
+.infoDiv {
+    max-width: 400px;
+    background-color: lightblue;
+    margin: 14px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+.infoDiv:hover {
+    background-color: lightgray;
+    transition: background-color 0.5s ease-in;
+}
+
+.infoTitle {
+
+    text-align: center;
+
+}
+
+.infoText {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
+}
+
+
+
+.page-content-window {
+    display: flex;
+    flex: 1;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    background-color: rgb(51, 51, 51);
+}
+
+.div-content-picture {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    margin: 10px;
+    background-color: rgb(85, 85, 85);
+}
+
+.content-info {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.content-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+}
+
+.content-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+.content-date {
+    color: rgb(126, 126, 126);
+}
+
+.media-picture {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.header-nav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    color: lightblue;
+    padding-left: 12px;
+    font-weight: bold;
+}

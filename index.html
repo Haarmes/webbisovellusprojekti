@@ -8,17 +8,89 @@
 </head>
 
 <body>
-    <script src="js/script.js"></script>
+
     <header id="headerTop">
-        <Button>yes</Button>
-        <button>no</button>
+
+        <p>Get Temperature in my area.</p>
+        <Button onclick="getWeatherInfo()">yes</Button>
+        <p id="weatherTemp"></p>
     </header>
-    <h1>Moikka!</h1>
+
+
     <aside id="sivupalkki"></aside>
-    <p>Miten koodaus sujuu?</p>
+    <p id="weatherTemp"></p>
+    <a href="#" onclick="show('page2','page1')" ;>Show page 2</a>
+    <div class="page1" id="page1">
+        <div class="pictureDiv">
+            <img src="assets/pictures/profiilikuva24-7.png" alt="oamk kuva" class="profilePicClass">
+        </div>
+        <div class="titlePicture">
+            <h1>Hey! i'm Severi</h1>
+        </div>
+        <div class="titleText">
+            <h2>This page is for testigs different html, css and javascript features</h2>
+        </div>
+        <div class="linksDiv" id="link1ID">
+            <div class="individualLinkDiv">
+                <img src="assets/pictures/github-logo.png" alt="github logo" class="linkPicture">
+                <p class="titleLink">link1</p>
+            </div>
+            <div class="individualLinkDiv">
+                <img src="assets/pictures/youtube-logo.png" alt="github logo" class="linkPicture">
+                <p class="titleLink">link1</p>
+            </div>
+            <div class="individualLinkDiv">
+                <img src="assets/pictures/twitch-logo.png" alt="github logo" class="linkPicture">
+                <p class="titleLink">link1</p>
+            </div>
+
+
+        </div>
+
+        <div class="infoPanelDiv">
+            <div class="infoDiv">
+                <div class="infoTitle">
+                    <h2>About Me</h2>
+                </div>
+                <div class="infoText">
+                    <p>Hey! I am a second year studen at University of Applied Sciences. I am a hardworking and
+                        enthusiastic about information technology and software development. I am eager to learn new
+                        things related to this field and I see myself going far with my skills. In my freetime I like to
+                        go to the gym of play videogames which I have always enjoyed.</p>
+                </div>
+
+            </div>
+            <div class="infoDiv">
+                <div class="infoTitle">
+                    <h2>About This Page</h2>
+                </div>
+                <div class="infoText">
+                    <p>This page is mainly to learn more about HTML, CSS and Javascript and test stuff. This is also an
+                        assignment for one of the courses. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page2" id="page2">
+        Content of page 2
+        <a href="#" onclick="return show('page1','page2');">Show page 1</a>
+        <div class="divForm">
+            <form action="">
+                <input type="text" id="textBooks">
+            </form>
+
+            <button id="textSend" onclick="clickFunctionText()">getBooks</button>
+        </div>
+        <p id="textInput"></p>
+
+    </div>
+
+
     <img src="assets/pictures/oamk-logo.png" alt="oamk kuva">
 
 </body>
 
+<script src="js/script.js"></script>
 
 </html>
