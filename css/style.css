@@ -110,7 +110,9 @@ h1 {}
 
 h2 {}
 
-
+.foxImage {
+    display: flex;
+}
 
 .linksDiv {
     background-color: lightcoral;

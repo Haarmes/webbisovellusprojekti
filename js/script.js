@@ -63,14 +63,21 @@ function show(shown, hidden) {
 
 }
 
+function clickFunctionTextSend() {
+    let text = document.getElementById("getText").value;
+    document.getElementById("getText").value = "";
+    console.log(text);
+    document.getElementById("textInput").innerHTML = text;
+}
+
 async function clickFunctionText() {
-    console.log("yes1");
-    let text = document.getElementById("textBooks").innerHTML;
-    console.log("yes2");
     //const response = await fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + text + '&limit=1&appid=' + geoApiKey);
-    const response = await fetch('https://cat-fact.herokuapp.com/facts');
-    console.log("yes");
-    console.log(response);
-    document.getElementById("textBooks").value = "";
-    document.getElementById("textInput").innerHTML = "You send a text with " + response;
+    const response = await fetch('https://randomfox.ca/floof/').then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    });
+    console.log(response.image);
+    document.getElementById("foxImage").src = response.image;
 }
