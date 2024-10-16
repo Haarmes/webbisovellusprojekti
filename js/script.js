@@ -23,6 +23,7 @@ link3.addEventListener("click", function () {
 
 
 function show(shown, hidden) {
+    console.log("in show function");
 
     document.getElementById(shown).style.display = 'flex';
     document.getElementById(hidden).style.display = 'none';
@@ -31,24 +32,11 @@ function show(shown, hidden) {
 
 }
 
-function clickFunctionTextSend() {
-    window.alert("text was send to table")
-    var table = document.getElementById("myTable");
-    let text = document.getElementById("getText").value;
-    let date = new Date();
-    textArray.push(text)
-    document.getElementById("getText").value = "";
-    console.log(text);
-    document.getElementById("tableText").innerHTML = text;
-    document.getElementById("tableTime").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-}
 
 async function clickFunctionText() {
-    //const response = await fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + text + '&limit=1&appid=' + geoApiKey);
     let text = document.getElementById("getText").value;
     var table = document.getElementById("myTable");
     var source = document.getElementById('audioSource');
-    var audio = document.getElementById("audioControlID");
     let intervalID = window.setInterval(searchDotsAdd, 1000);
     document.getElementById("searchText").innerHTML = "Searching";
 
@@ -61,13 +49,19 @@ async function clickFunctionText() {
             if (response.status == 404) {
                 alert("Didn't find the pokemon");
             }
+            else {
+                document.getElementById("searchText").innerHTML = "";
+                window.clearInterval(intervalID);
+                throw new Error('Network response was not ok');
+            }
+
+        }
+        else {
             document.getElementById("searchText").innerHTML = "";
             window.clearInterval(intervalID);
-            throw new Error('Network response was not ok');
+            return response.json();
         }
-        document.getElementById("searchText").innerHTML = "";
-        window.clearInterval(intervalID);
-        return response.json();
+
     });
     console.log(response);
     var row = table.insertRow(1);
@@ -82,6 +76,7 @@ async function clickFunctionText() {
     console.log(response.cries.latest);
     source.src = response.cries.latest;
     audio.load();
+    console.log("end of function");
 
 
 
