@@ -12,10 +12,14 @@
     <header id="headerTop">
 
         <P>Welcome to my website!</P>
+
+        <button href="#" id=headerPID onclick="return show('page1','page2');">Main page</a>
+            <button href="#" id=headerPID onclick="show('page2','page1')" ;>Pokemon page</a>
+
+
     </header>
 
 
-    <a href="#" onclick="show('page2','page1')" ;>Show page 2</a>
     <div class="page1" id="page1">
         <div class="pictureDiv">
             <img src="assets/pictures/profiilikuva24-7.png" alt="oamk kuva" class="profilePicClass" id="profilePicID">
@@ -77,30 +81,69 @@
 
     <div class="page2" id="page2">
 
-        <a href="#" onclick="return show('page1','page2');">Show page 1</a>
+        <br>
+        <br>
+        <div class="pokePageIntroduction">
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="">
+            <p class="pokePageInfo">This page uses <a href="https://pokeapi.co/">pokeAPI's</a> API to
+                get pokemon data with ID or Name. Parses
+                the data for some
+                useful information</p>
+        </div>
         <div class="divForm">
-            <form action="">
-                <input type="text" id="getText">
+            <form class="inputPokemonForm">
+                <div class="inputTitle">
+                    <h2>Type pokemon name or id</h2>
+                    <h2 id="searchText"></h2>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="getText">
+                    <button id="textSend" onclick="clickFunctionText()">get pokemon</button>
+
+                </div>
             </form>
 
-            <button id="textSend" onclick="clickFunctionTextSend()">Send Text</button>
         </div>
-        <table id="myTable">
+
+
+        <p id="pokemonName"></p>
+        <div id="pictureDivID" class="picPokemonDiv">
+            <img src="" alt="" id="pokemonPicID" class="pokemonPicClass">
+        </div>
+        <div id="audioDiv">
+            <div>
+                <audio controls id="audioControlID">
+                    <source src="" type="audio/ogg" id="audioSource">
+
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="pokeOptions">
+            <div class="OptionsTitle">
+                <h2>Additional Options</h2>
+            </div>
+            <div class="OptionsInfo">
+
+                <div id="spriteOptionDiv">
+                    <h3>Sprite Options</h3>
+                    Shiny: <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+                </div>
+                <div id="audioOptionDiv">
+                    <h3>Audio Options</h3>
+                </div>
+            </div>
+
+        </div>
+        <table id="myTable" class="tableClass">
             <tr>
-                <th>text</th>
+                <th>id</th>
+                <th>Pokemon</th>
                 <th>time</th>
             </tr>
-            <tr>
-                <th id="tableText"></th>
-                <th id="tableTime"></th>
-            </tr>
-        </table>
-        <p id="textInput"></p>
 
-        <div>
-            <button id="textSend" onclick="clickFunctionText()">get fox</button>
-            <img src="" alt="foxAlt" id="foxImage">
-        </div>
+        </table>
     </div>
 
 

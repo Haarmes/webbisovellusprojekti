@@ -20,15 +20,29 @@ button{
 header {
     display: flex;
     height: 45px;
+    gap: 15px;
     background-color: rgb(51, 51, 51);
-    margin: 0;
+    margin: 15px;
+    padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     transition: height 0.45s;
 
 }
 
 header:hover {
-    height: 55px;
+    height: 50px;
+}
+
+#headerPID {
+    margin: 10px;
+    border: solid;
+    border-radius: 2px;
+    padding: 2px;
+    background-color: lightgrey;
+}
+
+#headerPID:hover {
+    cursor: pointer;
 }
 
 body {
@@ -55,7 +69,102 @@ body {
     font-size: 32px;
 }
 
+.pokePageIntroduction {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: rgb(203, 210, 164);
+    max-width: 50%;
+    margin-bottom: 20px;
+    color: black
+}
 
+.pokePageInfo {
+    font-size: larger;
+}
+
+.inputPokemonForm {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(154, 126, 111);
+    border-radius: 8px;
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(84, 71, 63);
+}
+
+.inputTitle {
+    text-align: center;
+}
+
+.inputBox {
+    margin: auto;
+}
+
+#pokemonName {
+    text-align: center;
+    color: black;
+    font-size: larger;
+    font-style: bold;
+}
+
+.tableClass {
+
+    border-radius: 5px;
+    margin: 5px;
+
+    text-align: center;
+    background-color: rgb(84, 71, 63);
+
+
+}
+
+th {
+    border: 1px solid black;
+    border-radius: 8px;
+    max-width: 1%;
+
+}
+
+.picPokemonDiv {
+    margin: auto;
+}
+
+.audioDiv {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+
+#audioControlID {
+    display: block;
+    margin: auto;
+
+}
+
+.pokeOptions {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(154, 126, 111);
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(84, 71, 63);
+    padding: 10px
+}
+
+.OptionsInfo {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
 
 .page1 {
     display: flex;
@@ -70,7 +179,7 @@ body {
 .page2 {
     display: none;
     flex-direction: column;
-    background-color: lightblue;
+    background-color: rgb(203, 210, 164)
 }
 
 .pictureDiv {
