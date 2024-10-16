@@ -21,11 +21,12 @@ header {
     display: flex;
     height: 45px;
     gap: 15px;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(84, 71, 63);
     margin: 15px;
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     transition: height 0.45s;
+
 
 }
 
@@ -46,10 +47,10 @@ header:hover {
 }
 
 body {
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(154, 126, 111);
     color: white;
     margin: 0;
-    height: 2000px;
+
 }
 
 .header-title {
@@ -93,6 +94,7 @@ body {
     border-width: 2px;
     border-style: solid;
     border-color: rgb(84, 71, 63);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
 .inputTitle {
@@ -114,7 +116,7 @@ body {
 
     border-radius: 5px;
     margin: 5px;
-
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     text-align: center;
     background-color: rgb(84, 71, 63);
 
@@ -150,13 +152,15 @@ th {
     margin: auto;
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     background-color: rgb(154, 126, 111);
     border-radius: 8px;
     border-width: 2px;
     border-style: solid;
     border-color: rgb(84, 71, 63);
-    padding: 10px
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
 .OptionsInfo {
@@ -166,12 +170,18 @@ th {
     margin: 10px;
 }
 
+.spriteOptionDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
 .page1 {
     display: flex;
     flex: 1;
     flex-direction: column;
     align-content: center;
-    background-color: lightblue;
+    background-color: rgb(203, 210, 164);
     align-items: center;
 
 }
@@ -196,7 +206,7 @@ th {
 
 .divForm {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .profilePicClass {

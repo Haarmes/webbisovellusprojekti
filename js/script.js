@@ -39,6 +39,7 @@ async function clickFunctionText() {
     var source = document.getElementById('audioSource');
     let intervalID = window.setInterval(searchDotsAdd, 1000);
     document.getElementById("searchText").innerHTML = "Searching";
+    let SpriteOptions = document.getElementById("spriteOptionDiv");
 
 
     let date = new Date();
@@ -48,6 +49,8 @@ async function clickFunctionText() {
         if (!response.ok) {
             if (response.status == 404) {
                 alert("Didn't find the pokemon");
+                window.clearInterval(intervalID);
+                document.getElementById("searchText").innerHTML = "didn't find pokemon with " + text;
             }
             else {
                 document.getElementById("searchText").innerHTML = "";
@@ -75,8 +78,15 @@ async function clickFunctionText() {
     document.getElementById("pokemonName").innerHTML = response.name;
     console.log(response.cries.latest);
     source.src = response.cries.latest;
+    for (const [key, value] of Object.entries(response.sprites.versions)) {
+        console.log(`${key}: ${value}`);
+        let checkmark = document.createElement("input");
+        checkmark.type = "checkbox";
+        SpriteOptions.appendChild(checkmark);
+
+    }
     audio.load();
-    console.log("end of function");
+
 
 
 
