@@ -15,14 +15,12 @@
 
         <a href="#" id="headerPID" onclick="return show('page1','page2')">Main page</a>
         <a href="#" id="headerPID" onclick="show('page2','page1')">Pokemon page</a>
-
-
     </header>
 
 
     <div class="page1" id="page1">
         <div class="pictureDiv">
-            <img src="assets/pictures/profiilikuva24-7.png" alt="oamk kuva" class="profilePicClass" id="profilePicID">
+            <img src="assets/pictures/ledPic.png" alt="oamk kuva" class="profilePicClass" id="profilePicID">
         </div>
         <div class="titlePicture">
             <h1>Hey! i'm Severi</h1>
@@ -30,18 +28,18 @@
         <div class="titleText">
             <h2>This page is for testigs different html, css and javascript features</h2>
         </div>
-        <div class="linksDiv" id="link1ID">
+        <div class="linksDiv">
             <div class="individualLinkDiv">
-                <img src="assets/pictures/github-logo.png" alt="github logo" class="linkPicture">
-                <p class="titleLink">link1</p>
+                <img src="assets/pictures/github-logo.png" id="link1ID" alt="github logo" class="linkPicture">
+                <p class="titleLink"></p>
             </div>
             <div class="individualLinkDiv" id="link2ID">
                 <img src="assets/pictures/youtube-logo.png" alt="github logo" class="linkPicture">
-                <p class="titleLink">link1</p>
+                <p class="titleLink"></p>
             </div>
             <div class="individualLinkDiv" id="link3ID">
                 <img src="assets/pictures/twitch-logo.png" alt="github logo" class="linkPicture">
-                <p class="titleLink">link1</p>
+                <p class="titleLink"></p>
             </div>
 
 
@@ -66,14 +64,35 @@
                         <h2>About This Page</h2>
                     </div>
                     <div class="infoText">
-                        <p>This page is mainly to learn more about <a
-                                href="https://en.wikipedia.org/wiki/HTML">HTML</a>,
-                            <a href="https://en.wikipedia.org/wiki/CSS">CSS</a> and <a
-                                href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> and test
+                        <p>This page is mainly to learn more about <a href="https://en.wikipedia.org/wiki/HTML"
+                                media="print and (resolution:300dpi)">HTML</a>,
+                            <a href="https://en.wikipedia.org/wiki/CSS" media="print and (resolution:300dpi)">CSS</a>
+                            and <a href="https://en.wikipedia.org/wiki/JavaScript"
+                                media="print and (resolution:300dpi)">javascript</a> and test
                             stuff. This is also an
                             assignment for one of the courses.
                         </p>
                     </div>
+                </div>
+                <div class="infoDiv">
+                    <div class="infoTitle">
+                        <h2>Some programming skills</h2>
+                    </div>
+                    <div class="infoText">
+                        <ul>
+                            <li>Python </li>
+                            <li>C, C++</li>
+                            <li>Linux</li>
+                            <li>Javascript, html, css</li>
+                            <li>Node.js</li>
+                            <li>Java</li>
+                            <li>QT</li>
+                            <li>Kivy framework</li>
+                        </ul>
+
+
+                    </div>
+
                 </div>
             </div>
         </details>
@@ -98,7 +117,7 @@
                 </div>
                 <div class="inputBox">
                     <input type="text" id="getText">
-                    <button id="textSend" onclick="clickFunctionText()">get pokemon</button>
+                    <button id="textSend" onclick="clickFunctionText(event)">get pokemon</button>
 
                 </div>
 
@@ -127,13 +146,23 @@
             <div class="OptionsInfo">
 
                 <div id="spriteOptionDiv">
-                    <h3>Sprite Options</h3>
-                    Shiny: <input type="checkbox" id="myCheck" onclick="myFunction()">
+                    <div id="spriteOptionsTitle">
+                        <h3>Sprite Options</h3>
+                    </div>
+                    <table id="spriteOptionsSelect" class="tableClass">
+                        <tr>
+
+
+
+                        </tr>
+
+                    </table>
 
                 </div>
-                <div id="audioOptionDiv">
+                <!-- <div id="audioOptionDiv">
                     <h3>Audio Options</h3>
-                </div>
+                </div> -->
+
             </div>
 
         </div>
@@ -147,7 +176,7 @@
         </table>
     </div>
 
-
+    <footer id="footerID" class="footerClass"> This is a footer</footer>
 </body>
 
 <script src="js/script.js"></script>

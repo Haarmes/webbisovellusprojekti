@@ -22,7 +22,6 @@ header {
     height: 45px;
     gap: 15px;
     background-color: rgb(84, 71, 63);
-    margin: 15px;
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     transition: height 0.45s;
@@ -38,8 +37,10 @@ header:hover {
     margin: 10px;
     border: solid;
     border-radius: 2px;
+    border-color: rgb(57, 50, 46);
+    color: black;
     padding: 2px;
-    background-color: lightgrey;
+    background-color: rgb(186, 186, 186);
 }
 
 #headerPID:hover {
@@ -172,7 +173,22 @@ th {
 
 .spriteOptionDiv {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
+    background-color: lightyellow;
+
+}
+
+.spriteOptionsTitle {
+
+    background-color: lightyellow;
+    color: black;
+
+}
+
+.spriteOptionsSelect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: lightyellow;
 
 }
 
@@ -217,12 +233,12 @@ th {
 }
 
 .titlePicture {
-    background-color: lightblue;
+    background-color: rgb(203, 210, 164);
 
 }
 
 .titleText {
-    background-color: lightblue;
+    background-color: rgb(203, 210, 164);
 }
 
 h1 {
@@ -235,7 +251,7 @@ h2 {
 
 
 .linksDiv {
-    background-color: lightblue;
+    background-color: rgb(203, 210, 164);
     display: flex;
     flex-direction: row;
 
@@ -244,7 +260,7 @@ h2 {
 }
 
 .individualLinkDiv {
-    background-color: lightblue;
+    background-color: rgb(203, 210, 164);
     display: flex;
     flex-direction: row;
     margin: 1px;
@@ -254,7 +270,7 @@ h2 {
 }
 
 .titleLink {
-    background-color: lightblue;
+    background-color: rgb(203, 210, 164);
     margin-left: 10px;
     margin-right: 10px;
 
@@ -270,14 +286,15 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: lightcyan;
+    justify-content: center;
+    background-color: rgb(154, 126, 111);
     border-radius: 5px;
 
 }
 
 .infoDiv {
     max-width: 400px;
-    background-color: lightblue;
+    background-color: rgb(84, 71, 63);
     margin: 14px;
     border-radius: 5px;
     border-style: solid;
@@ -285,12 +302,12 @@ h2 {
 }
 
 .infoDiv:hover {
-    background-color: lightgray;
+    background-color: rgb(200, 118, 75);
     transition: background-color 0.5s ease-in;
 }
 
 .infoTitle {
-
+    margin: 10px;
     text-align: center;
 
 }
@@ -361,4 +378,14 @@ h2 {
     color: lightblue;
     padding-left: 12px;
     font-weight: bold;
+}
+
+.footerClass {
+    background-color: rgb(84, 71, 63);
+    text-align: center;
+    margin-bottom: 2px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+
 }
